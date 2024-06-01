@@ -1,0 +1,40 @@
+/* 
+selectors :
+inline
+universal
+class
+id
+element
+attribute
+*/
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family:Georgia, 'Times New Roman',times,serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    background:#f5f5f5 ;
+}
+.container{
+    max-width: 960px;
+    margin: 100px auto;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    grid-auto-rows: 200px;
+    grid-auto-rows: minmax(200px,auto);
+    grid-template-rows :repeat(3,1fr) ;
+
+}
+.item{
+    background: steelblue;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    border: skyblue 1px solid;
+}

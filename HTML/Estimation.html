@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Estimation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .module {
+            margin-bottom: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .module-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .module-title {
+            color: #555;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .total {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>System Estimation Breakdown</h1>
+
+    <div class="module" id="customer-module">
+        <div class="module-header" onclick="toggleModule('customer-module')">
+            <h2 class="module-title">Customer Module</h2>
+            <span>+</span>
+        </div>
+        <div class="task" style="display: none;">
+            <p>Registration and Login: 40 hours</p>
+            <p>System Estimation Feature: 60 hours</p>
+            <p>Feedback Submission Feature: 40 hours</p>
+            <p>Viewing Project Status: 30 hours</p>
+            <p>Accessing Deal Information: 30 hours</p>
+        </div>
+    </div>
+
+    <div class="module" id="bde-module">
+        <div class="module-header" onclick="toggleModule('bde-module')">
+            <h2 class="module-title">BDE Module</h2>
+            <span>+</span>
+        </div>
+        <div class="task" style="display: none;">
+            <p>Invitation via Email: 50 hours</p>
+            <p>Feedback Gathering: 40 hours</p>
+            <p>Discussion Arrangement: 40 hours</p>
+            <p>Query Resolution: 40 hours</p>
+        </div>
+    </div>
+
+    <div class="module" id="admin-module">
+        <div class="module-header" onclick="toggleModule('admin-module')">
+            <h2 class="module-title">Admin Module</h2>
+            <span>+</span>
+        </div>
+        <div class="task" style="display: none;">
+            <p>User Management: 60 hours</p>
+            <p>Reviewing Customer Feedback: 50 hours</p>
+            <p>Customer Relationship Comparison: 60 hours</p>
+            <p>Customer-wise Reporting: 70 hours</p>
+        </div>
+    </div>
+
+    <div class="module" id="common-functionalities">
+        <div class="module-header" onclick="toggleModule('common-functionalities')">
+            <h2 class="module-title">Common Functionalities</h2>
+            <span>+</span>
+        </div>
+        <div class="task" style="display: none;">
+            <p>Database Implementation: 80 hours</p>
+            <p>Integration of Modules: 60 hours</p>
+            <p>Testing: 120 hours</p>
+            <p>Deployment and Configuration: 40 hours</p>
+        </div>
+    </div>
+
+    <div class="total">
+        <h2>Total Estimated Effort</h2>
+        <p>1301 hours</p>
+    </div>
+</div>
+
+<script>
+    function toggleModule(moduleId) {
+        var module = document.getElementById(moduleId);
+        var task = module.querySelector('.task');
+        var icon = module.querySelector('span');
+
+        if (task.style.display === 'none') {
+            task.style.display = 'block';
+            icon.textContent = '-';
+        } else {
+            task.style.display = 'none';
+            icon.textContent = '+';
+        }
+    }
+</script>
+
+</body>
+</html>
